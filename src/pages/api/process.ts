@@ -15,7 +15,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   })
 
   cmd.stderr.on("data", (chunk) => {
-    const chunkStr = chunk.toString("utf-8")
+    const chunkStr = chunk.toString("utf8")
 
     console.error("ERROR:", chunkStr)
   })
