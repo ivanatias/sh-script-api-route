@@ -37,7 +37,7 @@ function ResultsOutput() {
     setIsProcessing(true)
 
     try {
-      const res = await fetch("/api/process")
+      const res = await fetch("/api/process") // Or /apiv2 for the route handler version
 
       if (!res.ok) {
         throw new Error(`Failed: ${await res.text()}`)

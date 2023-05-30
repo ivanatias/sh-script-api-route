@@ -13,6 +13,7 @@ export default function Home() {
         <Code code="scripts/example.sh" />
         <Code code="components/output.tsx" />
         <Code code="pages/api/process.ts" />
+        <Code code="app/apiv2/route.ts" />
       </div>
       <ResultsOutput />
     </main>
