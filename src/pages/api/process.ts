@@ -1,3 +1,4 @@
+import { cl } from "@ivnatsr/color-logs"
 import type { NextApiRequest, NextApiResponse } from "next"
 import { spawn } from "node:child_process"
 import path from "node:path"
@@ -11,13 +12,14 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   )
 
   cmd.on("close", (code) => {
-    console.log("Process finished with exit code:", code)
+    const msg = `Process finished with exit code: ${code}`
+    console.log(code === 0 ? cl.green(msg) : cl.red(msg))
   })
 
   cmd.stderr.on("data", (chunk) => {
     const chunkStr = chunk.toString("utf8")
 
-    console.error("ERROR:", chunkStr)
+    console.error(cl.red(`ERROR: ${chunkStr}`))
   })
 
   res.writeHead(200, {
