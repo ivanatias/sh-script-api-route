@@ -24,7 +24,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   res.writeHead(200, {
     "Content-Type": "text/plain",
-    "Cache-Control": "no-cache",
     "Content-Encoding": "none",
   })
 
