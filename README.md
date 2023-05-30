@@ -1,4 +1,4 @@
-#Demo - Running shell script from `pages` folder API Route
+# Demo - Running shell script from `pages` folder API Route
 
 Experimenting running a shell script from an API route and streaming data to the client-side using Next.js.
 
