@@ -28,7 +28,7 @@ const process = (
   })
 }
 
-function Output() {
+function ResultsOutput() {
   const [output, setOutput] = useState("")
   const [isProcessing, setIsProcessing] = useState(false)
 
@@ -46,8 +46,8 @@ function Output() {
       const reader = res.body?.getReader()
 
       if (reader !== undefined) {
-        await process(reader, (output) => {
-          setOutput(output)
+        await process(reader, (result) => {
+          setOutput(result)
         })
       }
     } catch (err) {
@@ -71,4 +71,4 @@ function Output() {
   )
 }
 
-export default Output
+export default ResultsOutput

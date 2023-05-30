@@ -1,4 +1,4 @@
-import Output from "@/components/output"
+import ResultsOutput from "@/components/results-output"
 import Code from "@/components/code"
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <Code code="components/output.tsx" />
         <Code code="pages/api/process.ts" />
       </div>
-      <Output />
+      <ResultsOutput />
     </main>
   )
 }
