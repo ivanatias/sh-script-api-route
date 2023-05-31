@@ -22,9 +22,7 @@ function iteratorToStream(asyncIteratorFn: () => AsyncIterator) {
   })
 }
 
-async function* readCmdOutput(
-  cmd: ChildProcessWithoutNullStreams
-): AsyncGenerator<Uint8Array | undefined> {
+async function* readCmdOutput(cmd: ChildProcessWithoutNullStreams) {
   const onDataReceivedPromiseWrapper = (): Promise<{
     chunk?: Uint8Array
     closed?: boolean
